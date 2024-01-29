@@ -16,21 +16,11 @@ public class HelloController {
 //    }
 
     @RequestMapping(value="hello", method = RequestMethod.GET)
-    @ResponseBody
+  
     public String helloForm()  {
 
-        String html = "<form method='post'>" +
-                "<input type = 'text' name = 'name' />" +
-                "<select name = 'language'>" +
-                "<option value = 'english'>English</option>" +
-                "<option value = 'french'>French</option>" +
-                "<option value = 'italian'>Italian</option>" +
-                "<option value = 'spanish'>Spanish</option>" +
-                "<option value = 'german'>German</option>" +
-                "</select>" +
-                "<input type = 'submit' value = 'Greet Me!' />" +
-                "</form>";
-        return html;
+
+        return "form";
 
         // For a bonus mission, the options of the select need to be pulled in from a model.
         // If a student has chosen to try this mission, they need to add a models package that contains a model for the different language options.
